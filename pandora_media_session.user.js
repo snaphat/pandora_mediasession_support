@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Pandora Media Session Support
 // @namespace    https://github.com/snaphat/pandora_media_session
-// @version      0.5.0
+// @version      0.5.1
 // @description  Shows media session information from Pandora Radio.
 // @author       Aaron Landwehr
 // @icon         https://raw.githubusercontent.com/snaphat/pandora_media_session_packager/main/assets/pandora_64x64.png
@@ -143,9 +143,9 @@ const updateMetadata = (function () {
         // to the metadata fields, the browser is more likely to recognize these changes and update the media session
         // display accordingly.
         if (!isEvenCall) {
-            title += " ";
-            artist += " ";
-            album += " ";
+            title += "\u200b";
+            artist += "\u200b";
+            album += "\u200b";
             artwork[1] = artwork[0]; // Duplicate the artwork entry to reinforce the metadata update
         }
 
